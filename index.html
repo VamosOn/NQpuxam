@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🔥 FAVICON LÉOBET -->
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="shortcut icon" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+<!-- 🔥 FAVICON PROFISSIONAL -->
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_16.png">
+<link rel="apple-touch-icon" href="favicon_180.png">
 
-<title>CRUZAMENTO PROFISSIONAL</title>
+<title>LéoBet | Cruzamento Profissional</title>
 
 <style>
 body {
@@ -28,6 +29,7 @@ h1 {
     text-shadow: 0 0 10px gold;
 }
 
+/* GRID */
 .grid {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(45px, 1fr));
@@ -36,6 +38,7 @@ h1 {
     max-width:500px;
 }
 
+/* NÚMEROS */
 .num {
     padding:14px;
     border-radius:10px;
@@ -54,19 +57,16 @@ h1 {
 .black { background:#000; }
 .green { background:green; }
 
-.num:hover {
-    transform: scale(1.05);
-}
+.num:hover { transform: scale(1.05); }
+.num:active { transform: scale(0.9); }
 
-.num:active {
-    transform: scale(0.9);
-}
-
+/* SELEÇÃO */
 .selected {
     border:2px solid white;
     box-shadow: 0 0 10px white;
 }
 
+/* DESTAQUE */
 .highlight {
     border:2px solid gold;
     box-shadow: 0 0 15px gold;
@@ -79,6 +79,7 @@ h1 {
     100% { box-shadow: 0 0 5px gold; }
 }
 
+/* RESULTADO */
 .result {
     background: linear-gradient(145deg, #1c1c1c, #111);
     padding:15px;
@@ -88,6 +89,7 @@ h1 {
     box-shadow: 0 0 15px rgba(255,215,0,0.2);
 }
 
+/* BOTÕES */
 button {
     padding:14px;
     margin:8px;
@@ -106,26 +108,18 @@ button {
     transition: 0.2s;
 }
 
-button:active {
-    transform: scale(0.95);
-}
+button:active { transform: scale(0.95); }
 
 @media (max-width:480px){
-    .num {
-        padding:12px;
-        font-size:14px;
-    }
-
-    h1 {
-        font-size:18px;
-    }
+    .num { padding:12px; font-size:14px; }
+    h1 { font-size:18px; }
 }
 </style>
 </head>
 
 <body>
 
-<h1>🔥 CRUZAMENTO DE NÚMEROS</h1>
+<h1>🔥 LéoBet - Cruzamento de Números</h1>
 
 <div class="grid" id="grid"></div>
 
